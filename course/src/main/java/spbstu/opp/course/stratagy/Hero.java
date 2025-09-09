@@ -43,21 +43,4 @@ public class Hero {
         movement.move(this, to);
         currentLocation = to;
     }
-
-    public void showInfo() {
-        StringBuilder infoBuilder = new StringBuilder();
-
-        infoBuilder.append(name)
-                   .append(" located at ")
-                   .append(currentLocation);
-
-        if (movement != null) {
-            infoBuilder.append(" and he used for movement: ")
-                       .append(movement);
-        } else {
-            infoBuilder.append(", but he don't know how move");
-        }
-
-        System.out.println(infoBuilder);
-    }
 }
