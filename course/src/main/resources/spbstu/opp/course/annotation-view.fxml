@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="spbstu.opp.course.annotation.AnnotationController"
+    spacing="12" prefWidth="700" prefHeight="480" style="-fx-padding:16;">
+
+    <HBox spacing="10" prefHeight="20">
+        <Button text="Start annotated methods" onAction="#onStart" />
+        <Button text="Clear" onAction="#onClear" />
+    </HBox>
+    <Label text="Log:"/>
+    <TextArea fx:id="logArea" editable="false" prefRowCount="12" VBox.vgrow="ALWAYS"/>
+</VBox>

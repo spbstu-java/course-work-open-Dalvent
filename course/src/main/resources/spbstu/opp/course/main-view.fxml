@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+    fx:controller="spbstu.opp.course.MainController">
+
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Strategy">
+                    <StackPane fx:id="strategyView"/>
+                </Tab>
+                <Tab text="Annotation">
+                    <StackPane fx:id="annotationView"/>
+                </Tab>
+                <Tab text="Translator">
+                    <StackPane fx:id="translatorView"/>
+                </Tab>
+                <Tab text="Stream API">
+                    <StackPane fx:id="streamApiView"/>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

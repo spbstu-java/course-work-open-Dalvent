@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?><?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="spbstu.opp.course.stream_api.StreamApiController"
+    spacing="12" alignment="TOP_LEFT" prefWidth="800" prefHeight="520" style="-fx-padding:16;">
+
+    <Label text="Input (separated by spaces or enters):"/>
+    <TextArea fx:id="inputArea" prefRowCount="6"/>
+
+    <FlowPane hgap="8" vgap="8">
+        <fx:define>
+            <ToggleGroup fx:id="methodsGroup"/>
+        </fx:define>
+
+        <RadioButton text="Average" toggleGroup="$methodsGroup" fx:id="averageRadio"/>
+        <RadioButton text="Uppercase + _new_" toggleGroup="$methodsGroup" fx:id="newAndUppercaseRadio" />
+        <RadioButton text="Unique squares" toggleGroup="$methodsGroup" fx:id="uniqueSquaresRadio"/>
+        <RadioButton text="Last" toggleGroup="$methodsGroup" fx:id="lastRadio"/>
+        <RadioButton text="Sum Even" toggleGroup="$methodsGroup" fx:id="sumEvenRadio"/>
+        <RadioButton text="Map first char" toggleGroup="$methodsGroup" fx:id="mapFirstCharRadio"/>
+    </FlowPane>
+
+    <HBox spacing="10" prefHeight="20">
+        <Button prefWidth="80" text="Run" onAction="#onRun"/>
+        <Button text="Clear" onAction="#onClear" />
+    </HBox>
+
+    <Label text="Log:"/>
+    <TextArea fx:id="logArea" editable="false" prefRowCount="12" VBox.vgrow="ALWAYS"/>
+</VBox>
