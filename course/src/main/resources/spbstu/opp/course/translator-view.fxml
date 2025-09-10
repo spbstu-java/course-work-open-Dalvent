@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?><?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="spbstu.opp.course.translator.TranslatorController"
+    spacing="12" alignment="TOP_LEFT" prefWidth="800" prefHeight="520" style="-fx-padding:16;">
+    <HBox spacing="10">
+        <Button text="Choose vocabulary..." onAction="#onChooseVocabulary"/>
+        <Label fx:id="vocabularyStatus" text="Vocabulary not found" style="-fx-text-fill: #777;"/>
+    </HBox>
+
+    <Button text="Read from file" onAction="#onReadFromFile"/>
+
+    <Label text="Input:"/>
+    <TextArea fx:id="inputText" promptText="Enter text to translate..." prefRowCount="8"/>
+
+    <Button text="Translate!" onAction="#onTranslate"/>
+
+    <Label text="Translated:"/>
+    <TextArea fx:id="translatedArea" editable="false" prefRowCount="12" VBox.vgrow="ALWAYS"/>
+</VBox>
